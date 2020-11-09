@@ -26,9 +26,9 @@ const FoodILike = [
 function Food({ name, image, rating }) {
   return (
     <div>
-      <h2> I LIKE {name}</h2>
-      <h4>{rating}/5</h4>
-      <h3> I LIKE {image}</h3>
+      <h2> movie {name}</h2>
+      <h3>{image}</h3>
+      <h4>★{rating}/5</h4>
     </div>
   );
 }
@@ -40,15 +40,15 @@ Food.propTypes = {
 }
 
 // function renderFood(item) {
-//   return <Food key={item.id} name={item.name} image={item.image} rating={item.rating} />
-
+//   return (
+//     <Food key={item.id} name={item.name} image={item.image} rating={item.rating} />
+//   );
 // }
 
 function App() {
   // HTML 반환
   return (
     <div className="App">
-      {/* map을 이용해 함수를 호출 */}
       {/* {FoodILike.map(renderFood)} */}
       {FoodILike.map(item => (
         <Food
@@ -60,6 +60,6 @@ function App() {
       ))}
     </div>
   ); // return
-}
+} // App()
 
 export default App;
